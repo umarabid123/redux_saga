@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import { addCart, emptyCart, removeCart } from "./redux/action";
+import { productAction } from "./redux/productAction";
 
 function App() {
   const  dispatch = useDispatch()
@@ -23,6 +24,10 @@ function App() {
         </button>
         <button onClick={() => dispatch(emptyCart())} style={{ padding: '0.5rem 1rem', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
           Remove to Cart
+        </button>
+
+        <button onClick={() => dispatch(productAction())} style={{ padding: '0.5rem 1rem', backgroundColor: 'cyan', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+          Product List
         </button>
       </header>
     </div>
