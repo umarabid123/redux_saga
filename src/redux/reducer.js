@@ -13,8 +13,6 @@ export const cartData = (data = [], action) => {
 
     case EMPTY_CART:
       return [];
-      case PRODUCT_LIST:
-        return [action.data, ...data];
     default:
       return [];
   }

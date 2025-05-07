@@ -6,8 +6,8 @@ import { productAction } from "./redux/productAction";
 function App() {
   const  dispatch = useDispatch()
 
+  const resultProduct = useSelector((state) => state.productAction)
   const results = useSelector((state) => state.cartData)
-  console.log('results: ', results);
   const product ={
     name:'Umar',
     lastName:"Abid"
