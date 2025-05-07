@@ -1,4 +1,4 @@
-import { ADD_TO_CART, EMPTY_CART, REMOVE_CART } from "./constant";
+import { ADD_TO_CART, EMPTY_CART, PRODUCT_LIST, REMOVE_CART } from "./constant";
 
 export const cartData = (data = [], action) => {
   console.log("Reducer Call");
@@ -13,6 +13,8 @@ export const cartData = (data = [], action) => {
 
     case EMPTY_CART:
       return [];
+      case PRODUCT_LIST:
+        return [action.data, ...data];
     default:
       return [];
   }

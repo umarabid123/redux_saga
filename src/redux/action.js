@@ -1,4 +1,4 @@
-import { ADD_TO_CART, EMPTY_CART, REMOVE_CART } from "./constant";
+import { ADD_TO_CART, EMPTY_CART, PRODUCT_LIST, REMOVE_CART } from "./constant";
 
 export const addCart =(data)=>{
     console.log("Called action",data);
@@ -26,3 +26,4 @@ export const emptyCart =(data)=>{
 
     }
 }
+
